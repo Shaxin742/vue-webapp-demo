@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "fastclick": "^1.0.6",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "vant": "^2.0.0-beta.3",
     "vue": "^2.5.2",
+    "vue-directive-touch": "^1.0.28",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

@@ -4,8 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueLazyload from 'vue-lazyload'
-// Vue.use(Vant);
+import FastClick from 'fastclick'
+import touch from 'vue-directive-touch'
 import 'vant/lib/index.css'
+Vue.use(touch) // 左滑返回
+FastClick.attach(document.body)
+FastClick.prototype.onTouchEnd = function (event) {
+  if (event.target.hasAttribute('type') && event.target.getAttribute('type') === 'text') {
+    event.preventDefault()
+    return false
+  }
+}
+
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: './static/img/error.jpg',

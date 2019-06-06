@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <!-- <router-link to="/shopCart">shopCart</router-link> -->
+    <van-cell title="单元格" is-link to="/shopCart" />
     <div>
     <img v-lazy="imgUrl" alt=""/>
     <img src="@/assets/img/home.jpg" alt="">
@@ -10,7 +12,6 @@
       <van-cell title="单元格" value="内容" />
       <van-cell title="单元格" value="内容" label="描述信息" />
     </van-cell-group>
-    <router-link to="/shopCart">shopCart</router-link>
   </div>
 </template>
 

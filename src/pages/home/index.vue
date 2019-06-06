@@ -1,12 +1,6 @@
 <template>
   <div class="hello">
-    <!-- <router-link to="/shopCart">shopCart</router-link> -->
     <van-cell title="单元格" is-link to="/shopCart" />
-    <div>
-    <img v-lazy="imgUrl" alt=""/>
-    <img src="@/assets/img/home.jpg" alt="">
-    </div>
-    <van-button  type="primary" @click="saveImg">保存图片</van-button>
     <van-button type="default" @click="getLocation">获取地理位置</van-button>
     <van-cell-group>
       <van-cell title="单元格" value="内容" />
@@ -23,13 +17,11 @@ export default {
     [Cell.name]: Cell,
     [CellGroup.name]: CellGroup
   },
-  name: 'HelloWorld',
-  data () {
-    return {
-      imgUrl: 'http://qiniudns.shaxin741.vip/timg.jpg'
-    }
-  },
+  name: 'home',
   methods: {
+    jump () {
+      this.$router.push('/shopCart')
+    },
     getLocation () {
       plus.geolocation.getCurrentPosition( // eslint-disable-line
         function (p) {
@@ -77,8 +69,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-img {
-  width: 100%;
-}
+<style lang="scss" scoped>
+@import "@/assets/css/transtion.scss";
+
 </style>

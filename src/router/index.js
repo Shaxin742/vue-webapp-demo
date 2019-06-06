@@ -7,22 +7,30 @@ Router.prototype.goBack = function () {
 }
 export default new Router({
   routes: [
-    // {
-    // path: '/',
-    // name: 'pageTransition',
-    // redirect: '/',
-    // component: () => import('@/components/pageTransition'),
-    // children: [
     {
       path: '/',
-      name: 'home',
-      component: () => import('@/pages/home')
+      name: 'tabbar',
+      redirect: '/',
+      component: () => import('@/components/tabbar'),
+      children: [
+        {
+          path: '/',
+          name: 'home',
+          component: () => import('@/pages/home')
+        }, {
+          path: '/plus',
+          name: 'plus',
+          component: () => import('@/pages/plus')
+        }
+      ]
     }, {
       path: '/shopCart',
       name: 'shopCart',
       component: () => import('@/pages/shopCart')
+    }, {
+      path: '/plus/saveImg',
+      name: 'saveImg',
+      component: () => import('@/pages/plusPages/saveImg')
     }
-    //   ]
-    //   }
   ]
 })

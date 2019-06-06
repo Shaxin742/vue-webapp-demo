@@ -4,10 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueLazyload from 'vue-lazyload'
-import FastClick from 'fastclick'
-import touch from 'vue-directive-touch'
+import FastClick from 'fastclick' // 去除手机端点击300ms
 import 'vant/lib/index.css'
-Vue.use(touch) // 左滑返回
+import store from './store'
 FastClick.attach(document.body)
 FastClick.prototype.onTouchEnd = function (event) {
   if (event.target.hasAttribute('type') && event.target.getAttribute('type') === 'text') {
@@ -28,5 +27,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  render: g => g(App)
+  store,
+  render: h => h(App)
 })

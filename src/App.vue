@@ -1,6 +1,8 @@
 <template>
-  <div id="app" v-touch:left="onSwipeLeft">
-    <router-view/>
+  <div id="app">
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
@@ -12,9 +14,6 @@ export default {
     plusReady(this.plusReady)
   },
   methods: {
-    onSwipeLeft () {
-      this.$router.goBack()
-    },
     plusReady () {
       let self = this
       plus.key.addEventListener(//eslint-disable-line
@@ -31,11 +30,19 @@ export default {
 </script>
 
 <style>
+body,
+html {
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-
 </style>

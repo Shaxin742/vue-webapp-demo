@@ -1,0 +1,12 @@
+img{
+  width: 100%;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.flex{
+  display: flex
+}

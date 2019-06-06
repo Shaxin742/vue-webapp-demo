@@ -1,5 +1,7 @@
 <template>
-  <transition name="slide">
+  <transition
+    name="slide"
+  >
     <div class="con">
       <van-nav-bar
         class="header"
@@ -11,10 +13,9 @@
         @click-right="onClickRight"
       />
       <div style="padding-top:50px;">
-        {{name}}
         <van-button type="default" @click="$router.goBack()">返回</van-button>
       </div>
-      </div>
+    </div>
   </transition>
 </template>
 <script>
@@ -26,7 +27,8 @@ export default {
   },
   data () {
     return {
-      name: 'shopCart'
+      name: 'shopCart',
+      show: true
     }
   },
   methods: {
@@ -41,6 +43,12 @@ export default {
 </script>
 <style lang="scss" scoped rel="stylesheet/scss">
 @import "@/assets/css/transtion.scss";
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 .con{
   position: absolute;
   z-index: 100;

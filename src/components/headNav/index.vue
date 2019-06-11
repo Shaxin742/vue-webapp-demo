@@ -11,11 +11,13 @@
     </van-nav-bar>
 </template>
 <script>
+import { myMixin } from '@/util/mixin.js'
 import { NavBar } from 'vant'
 export default {
   components: {
     [NavBar.name]: NavBar
   },
+  mixins: [myMixin],
   props: {
     leftValue: {
       default: '',

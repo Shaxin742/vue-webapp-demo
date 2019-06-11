@@ -1,9 +1,8 @@
 <template>
   <div class="hello">
     <van-cell title="单元格" is-link to="/shopCart" />
-    <van-button type="default" @click="getLocation">获取地理位置</van-button>
     <van-cell-group>
-      <van-cell title="单元格" value="内容" />
+      <van-cell title="底部弹出" is-link to='/normal/popUp'/>
       <van-cell title="单元格" value="内容" label="描述信息" />
     </van-cell-group>
   </div>
@@ -22,23 +21,7 @@ export default {
     jump () {
       this.$router.push('/shopCart')
     },
-    getLocation () {
-      plus.geolocation.getCurrentPosition( // eslint-disable-line
-        function (p) {
-          Toast(
-            'Geolocation\nLatitude:' +
-              p.coords.latitude +
-              '\nLongitude:' +
-              p.coords.longitude +
-              '\nAltitude:' +
-              p.coords.altitude
-          )
-        },
-        function (e) {
-          Toast('Geolocation error: ' + e.message)
-        }
-      )
-    },
+
     saveImg () {
       var dtask = plus.downloader.createDownload(this.imgUrl, {}, function (// eslint-disable-line
         d,

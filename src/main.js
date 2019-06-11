@@ -6,6 +6,7 @@ import router from './router'
 import VueLazyload from 'vue-lazyload'
 import FastClick from 'fastclick' // 去除手机端点击300ms
 import 'vant/lib/index.css'
+import '@/assets/css/common.css'
 import store from './store'
 FastClick.attach(document.body)
 FastClick.prototype.onTouchEnd = function (event) {
@@ -22,6 +23,10 @@ Vue.use(VueLazyload, {
   attempt: 1
 })
 Vue.config.productionTip = false
+
+Vue.prototype.back = function () {
+  router.go(-1)
+}
 
 /* eslint-disable no-new */
 new Vue({

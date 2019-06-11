@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <keep-alive>
-      <router-view/>
+      <router-view class="childView" :style="{minHeight:clientHeight+'px'}"/>
     </keep-alive>
   </div>
 </template>
@@ -12,6 +12,12 @@ export default {
   name: 'App',
   created () {
     plusReady(this.plusReady)
+    this.clientHeight = document.body.clientHeight
+  },
+  data: function () {
+    return {
+      clientHeight: ''
+    }
   },
   methods: {
     plusReady () {
@@ -28,21 +34,3 @@ export default {
   }
 }
 </script>
-
-<style>
-body,
-html {
-  overflow: hidden;
-  overflow-y: auto;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-</style>

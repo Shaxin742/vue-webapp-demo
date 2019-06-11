@@ -1,29 +1,21 @@
 <template>
-  <transition
-    name="slide"
-  >
+  <transition name="slide">
     <div class="con">
-      <van-nav-bar
-        class="header"
-        title="标题"
-        left-text="返回"
-        right-text="按钮"
-        left-arrow
-        @click-left="onClickLeft"
-        @click-right="onClickRight"
-      />
-      <div style="padding-top:50px;">
+      <head-nav leftValue='返回' @leftClick='back'></head-nav>
+      <div>
         <van-button type="default" @click="$router.goBack()">返回</van-button>
       </div>
     </div>
   </transition>
 </template>
 <script>
+import headNav from '@/components/headNav'
 import { Button, Toast, NavBar } from 'vant'
 export default {
   components: {
     [Button.name]: Button,
-    [NavBar.name]: NavBar
+    [NavBar.name]: NavBar,
+    headNav: headNav
   },
   data () {
     return {

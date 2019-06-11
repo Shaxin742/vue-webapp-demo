@@ -1,21 +1,29 @@
 <template>
-<transtion name='fade'>
-  <div>
-    <head-nav leftValue='AA' @leftClick='leftClick' @rightClick='leftClick'></head-nav>
+  <transition name="slide">
     <div>
-      <img v-lazy="imgUrl" alt=""/>
-      <img src="@/assets/img/home.jpg" alt="">
+      <head-nav leftValue='返回' @leftClick='back'></head-nav>
+      <div>
+        <img v-lazy="imgUrl" alt=""/>
+        <img src="@/assets/img/home.jpg" alt="">
+        <van-image
+          width="100"
+          height="100"
+          lazy-load
+          fit="contain"
+          :src="imgUrl"
+        />
+      </div>
+      <van-button class="btn" type="primary" @click="saveImg">保存图片</van-button>
     </div>
-    <van-button type="primary" @click="saveImg">保存图片</van-button>
-  </div>
-</transtion>
+  </transition>
 </template>
 <script>
-import { Button, Toast } from 'vant'
+import { Button, Toast, Image } from 'vant'
 import headNav from '@/components/headNav'
 export default {
   components: {
     [Button.name]: Button,
+    [Image.name]: Image,
     headNav: headNav
   },
   data: function () {
@@ -49,14 +57,12 @@ export default {
         }
       })
       dtask.start()
-    },
-    leftClick () {
-      Toast('123')
     }
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" scoped rel="stylesheet/scss">
+@import "@/assets/css/transtion.scss";
 img {
   width: 100%;
 }

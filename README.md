@@ -1,6 +1,6 @@
 # webapp-demo
 
-> A Vue.js project
+> 一个webapp的小demo 支持plus 暂时图片上传打包后能看 需要什么需求跟我说 我再加
 
 ## Build Setup
 

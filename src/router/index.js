@@ -32,6 +32,14 @@ export default new Router({
       name: 'saveImg',
       component: () => import('@/pages/plusPages/saveImg')
     }, {
+      path: '/plus/chooseImg',
+      name: 'chooseImg',
+      component: () => import('@/pages/plusPages/chooseImg')
+    }, {
+      path: '/plus/chooseImg2',
+      name: 'chooseImg2',
+      component: () => import('@/pages/plusPages/chooseImg2')
+    }, {
       path: '/plus/getlocation',
       name: 'getlocation',
       component: () => import('@/pages/plusPages/getlocation')

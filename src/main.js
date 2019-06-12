@@ -7,6 +7,7 @@ import VueLazyload from 'vue-lazyload'
 import FastClick from 'fastclick' // 去除手机端点击300ms
 import 'vant/lib/index.css'
 import '@/assets/css/common.css'
+import '@/util/vconsole.min.js'
 import store from './store'
 FastClick.attach(document.body)
 FastClick.prototype.onTouchEnd = function (event) {

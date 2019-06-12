@@ -10,19 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'tabbar',
-      redirect: '/',
-      component: () => import('@/components/tabbar'),
-      children: [
-        {
-          path: '/',
-          name: 'home',
-          component: () => import('@/pages/home')
-        }, {
-          path: '/plus',
-          name: 'plus',
-          component: () => import('@/pages/plus')
-        }
-      ]
+      component: () => import('@/pages/tabbar')
     }, {
       path: '/shopCart',
       name: 'shopCart',

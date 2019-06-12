@@ -1,8 +1,15 @@
 <template>
   <transition name="slide">
-    <div class="con">
+    <div class="container">
       <head-nav leftValue='返回' @leftClick='back'></head-nav>
       <div>
+        <img v-lazy="imgUrl" alt=""/>
+        <img v-lazy="imgUrl" alt=""/>
+        <img v-lazy="imgUrl" alt=""/>
+        <img v-lazy="imgUrl" alt=""/>
+        <img v-lazy="imgUrl" alt=""/>
+
+        <img v-lazy="imgUrl" alt=""/>
         <van-button type="default" @click="$router.goBack()">返回</van-button>
       </div>
     </div>
@@ -40,15 +47,6 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
-}
-.con{
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #f7f7f7;
 }
 .header {
   top: 0;

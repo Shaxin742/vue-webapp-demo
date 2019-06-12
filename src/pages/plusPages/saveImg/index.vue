@@ -1,6 +1,6 @@
 <template>
   <transition name="slide">
-    <div>
+    <div class="container">
       <head-nav leftValue='返回' @leftClick='back'></head-nav>
       <div>
         <img v-lazy="imgUrl" alt=""/>

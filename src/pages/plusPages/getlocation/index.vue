@@ -1,6 +1,6 @@
 <template>
   <transition name="slide">
-    <div >
+    <div class="container">
       <head-nav leftValue='返回' @leftClick='back'></head-nav>
       <div>
         <van-button class="btn" type="primary" @click="getLocation()">获取地理位置</van-button>

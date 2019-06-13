@@ -16,6 +16,7 @@
         />
         <img :src="photoInfo.path" alt="">
       </div>
+      <input type="file" ref='camera' class="hidden" @change="getBaseUrl($event)"/>
       <van-action-sheet
         v-model="show"
         :actions="actions"
@@ -23,7 +24,6 @@
         @select="onSelect"
         @cancel="onCancel"
       />
-       <input type="file" ref='camera' class="hidden" @change="getBaseUrl($event)"/>
     </div>
   </transition>
 </template>
@@ -73,10 +73,8 @@ export default {
       reader.onloadend = function () {
         const dataURL = reader.result
         console.log(dataURL)
-
         let img = new Image()
         img.src = dataURL
-
         img.onload = function () {
           let data = self.compress(img, 0.3)
           self.$set(self.photoInfo, 'path', data)

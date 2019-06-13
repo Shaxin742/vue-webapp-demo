@@ -9,11 +9,10 @@
   </transition>
 </template>
 <script>
+import { Toast } from 'vant'
 import headNav from '@/components/headNav'
-import { Button, Toast } from 'vant'
 export default {
   components: {
-    [Button.name]: Button,
     headNav: headNav
   },
   methods: {

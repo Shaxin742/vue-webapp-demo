@@ -9,13 +9,8 @@
 </template>
 
 <script>
-import { Button, Cell, CellGroup, Toast } from 'vant'
+import { Toast } from 'vant'
 export default {
-  components: {
-    [Button.name]: Button,
-    [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup
-  },
   name: 'home',
   methods: {
     jump () {

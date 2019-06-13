@@ -9,6 +9,7 @@ import 'vant/lib/index.css'
 import '@/assets/css/common.css'
 import '@/util/vconsole.min.js'
 import store from './store'
+import Vant from 'vant'
 FastClick.attach(document.body)
 FastClick.prototype.onTouchEnd = function (event) {
   if (event.target.hasAttribute('type') && event.target.getAttribute('type') === 'text') {
@@ -17,6 +18,7 @@ FastClick.prototype.onTouchEnd = function (event) {
   }
 }
 
+Vue.use(Vant)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: './static/img/error.jpg',

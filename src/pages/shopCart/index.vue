@@ -17,11 +17,9 @@
 </template>
 <script>
 import headNav from '@/components/headNav'
-import { Button, Toast, NavBar } from 'vant'
+import { Toast } from 'vant'
 export default {
   components: {
-    [Button.name]: Button,
-    [NavBar.name]: NavBar,
     headNav: headNav
   },
   data () {

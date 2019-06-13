@@ -14,13 +14,10 @@
 <script>
 import dash from './dash'
 import plus from './plus'
-import { Tabbar, TabbarItem } from 'vant'
 export default {
   components: {
     dash: dash,
-    plus: plus,
-    [Tabbar.name]: Tabbar,
-    [TabbarItem.name]: TabbarItem
+    plus: plus
   },
   data () {
     return {

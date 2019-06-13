@@ -41,3 +41,6 @@ html {
   right: 0;
   bottom: 0;
 }
+.hidden{
+  display: none;
+}

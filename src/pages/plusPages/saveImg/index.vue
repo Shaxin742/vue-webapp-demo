@@ -18,12 +18,10 @@
   </transition>
 </template>
 <script>
-import { Button, Toast, Image } from 'vant'
+import { Toast } from 'vant'
 import headNav from '@/components/headNav'
 export default {
   components: {
-    [Button.name]: Button,
-    [Image.name]: Image,
     headNav: headNav
   },
   data: function () {

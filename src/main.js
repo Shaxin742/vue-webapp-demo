@@ -7,7 +7,9 @@ import VueLazyload from 'vue-lazyload'
 import FastClick from 'fastclick' // 去除手机端点击300ms
 import 'vant/lib/index.css'
 import '@/assets/css/common.css'
+import '@/assets/css/global.scss'
 import '@/util/vconsole.min.js'
+import '@/assets/iconfont/iconfont.css'
 import store from './store'
 import Vant from 'vant'
 FastClick.attach(document.body)

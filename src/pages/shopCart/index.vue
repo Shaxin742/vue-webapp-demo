@@ -17,7 +17,6 @@
 </template>
 <script>
 import headNav from '@/components/headNav'
-import { Toast } from 'vant'
 export default {
   components: {
     headNav: headNav
@@ -25,15 +24,8 @@ export default {
   data () {
     return {
       name: 'shopCart',
+      imgUrl: '',
       show: true
-    }
-  },
-  methods: {
-    onClickLeft () {
-      window.history.back()
-    },
-    onClickRight () {
-      Toast('按钮')
     }
   }
 }

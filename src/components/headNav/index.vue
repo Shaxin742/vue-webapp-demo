@@ -1,6 +1,6 @@
 <template>
     <van-nav-bar
-      title="标题"
+      :title="title || $route.meta.name"
       :left-text="leftValue"
       :right-text="rightValue"
       left-arrow
@@ -24,6 +24,10 @@ export default {
       type: String
     },
     rightValue: {
+      default: '',
+      type: String
+    },
+    title: {
       default: '',
       type: String
     }

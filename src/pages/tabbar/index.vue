@@ -1,7 +1,8 @@
 <template>
   <div class="tabbar">
-    <dash v-if="active===0"/>
+    <normal v-if="active===0"/>
     <plus v-if="active===1"/>
+    <sxcomponents v-if="active===2"/>
     <div style="height:50px"></div>
     <van-tabbar v-model="active">
       <van-tabbar-item icon="home-o">首页</van-tabbar-item>
@@ -12,11 +13,13 @@
   </div>
 </template>
 <script>
-import dash from './dash'
+import normal from './normal'
 import plus from './plus'
+import sxcomponents from './sxComponents'
 export default {
   components: {
-    dash: dash,
+    normal,
+    sxcomponents,
     plus: plus
   },
   data () {

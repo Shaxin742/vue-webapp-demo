@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont-wp" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont-wp"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="voice" unicode="&#59044;" d="M519.312 504h16a16 16 0 0 0 16-16v-168.352a16 16 0 0 0-16-16h-16a16 16 0 0 0-16 16V488a16 16 0 0 0 16 16zM408 459.472h16a16 16 0 0 0 16-16v-79.296a16 16 0 0 0-16-16h-16a16 16 0 0 0-16 16v79.296a16 16 0 0 0 16 16z m222.608 0h16a16 16 0 0 0 16-16v-79.296a16 16 0 0 0-16-16h-16a16 16 0 0 0-16 16v79.296a16 16 0 0 0 16 16zM418.512 176.72l0.032 0.08A311.04 311.04 0 0 1 520 160C675.2 160 800 271.68 800 408S675.2 656 520 656 240 544.32 240 408c0-70.592 33.52-136.56 91.568-183.392l-0.08-0.096 3.328-92.8 83.696 45.008z m-134 25.184C225.84 256.464 192 329.696 192 408 192 572.112 339.408 704 520 704S848 572.112 848 408 700.592 112 520 112c-32.992 0-65.328 4.4-96.224 12.944l-109.792-59.76a16 16 0 0 0-23.632 13.312l-5.84 123.408z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

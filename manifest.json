@@ -1,4 +1,4 @@
-﻿{
+{
     "@platforms": ["android", "iPhone", "iPad"],
     "id": "H59D571EC",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "WebappDemo",/*应用名称，程序桌面图标名称*/

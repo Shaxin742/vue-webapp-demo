@@ -94,8 +94,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import "@/assets/css/index.scss";
 .cu-chat {
   display: flex;
+  background: $greyLight;
   flex-direction: column;
 }
 

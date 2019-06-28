@@ -49,6 +49,12 @@ export default new Router({
       component: () => import('@/pages/normalPages/popUp')
     },
     {
+      path: '/normal/shanghua',
+      name: 'shanghua',
+      meta: {name: '上劃'},
+      component: () => import('@/pages/normalPages/shanghua')
+    },
+    {
       path: '/sxComponents/chat',
       name: 'chat',
       meta: {name: '聊天'},

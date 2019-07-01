@@ -1,5 +1,5 @@
 <template>
-  <div class="my">
+  <div class="my" ref="myDom" @scroll="handleScroll()">
     <div class="infoCon">
       <div class="headerBar"></div>
       <div class="userInfo" :style="{height:styles.userInfoHeight+'px'}">
@@ -11,10 +11,10 @@
       </div>
       <div class="tools">
         <van-icon name="setting-o" />
-        <van-icon name="scan" />
+        <van-icon name="scan" @click="scan()"/>
       </div>
     </div>
-    <van-cell-group>
+    <van-cell-group ref="gggg">
       <van-cell title="测试"/>
       <van-cell title="测试"/>
       <van-cell title="测试"/>
@@ -53,7 +53,7 @@
 
 <script>
 export default {
-  name: 'my',
+  name: 'mine',
   data: function () {
     return {
       userInfo: {
@@ -70,34 +70,54 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('scroll', this.handleScroll, true)
+    // console.log(this.$refs.myDom)
+    // this.$refs.my.addEventListener('scroll', this.handleScroll, true)
+    // console.log(document.getElementById('id'))
   },
   methods: {
-    handleScroll () {
-      var scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop
-      if (scrollTop < 140) {
-        this.styles.userInfoHeight = 140 - scrollTop
-        this.styles.nameFont =
-          (140 - scrollTop) / 140 * 22 > 17 ? (140 - scrollTop) / 140 * 22 : 17
-        this.styles.nameFont <= 17
-          ? (this.styles.namePosition = 'fixed')
-          : (this.styles.namePosition = 'absolute')
-        this.styles.nameFont <= 17
-          ? (this.styles.nameTop = 10)
-          : (this.styles.nameTop = 40)
-        this.styles.opacity = (140 - scrollTop) / 140
-      }
+    handleScroll (e) {
+      console.log(e)
+      // var scrollTop =
+      //   window.pageYOffset ||
+      //   document.documentElement.scrollTop ||
+      //   document.body.scrollTop
+      // console.log(scrollTop)
+      // console.log(1)
+      // console.log(this.$refs.my.scrollTop)
+
+      // if (scrollTop < 140) {
+      //   this.styles.userInfoHeight = 140 - scrollTop
+      //   this.styles.nameFont =
+      //     (140 - scrollTop) / 140 * 22 > 17 ? (140 - scrollTop) / 140 * 22 : 17
+      //   this.styles.nameFont <= 17
+      //     ? (this.styles.namePosition = 'fixed')
+      //     : (this.styles.namePosition = 'absolute')
+      //   this.styles.nameFont <= 17
+      //     ? (this.styles.nameTop = 10)
+      //     : (this.styles.nameTop = 40)
+      //   this.styles.opacity = (140 - scrollTop) / 140
+      // }
+    },
+    // 二维码扫码
+    scan () {
+      console.log(123)
+      plus.barcode.scan('http://qiniudns.shaxin741.vip/barcode.png', function (type, result) { // eslint-disable-line
+        console.log('Scan success:(' + type + ')' + result)
+      }, function (e) {
+        console.log('Scan failed: ' + JSON.stringify(e))
+      })
     }
   }
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 @import "@/assets/css/index.scss";
+.my{
+  overflow: hidden;
+}
 .infoCon {
   position: relative;
   overflow: hidden;
@@ -139,12 +159,12 @@ export default {
     display: flex;
     justify-content: center;
     // width: 100%;
-    font-size: 16px;
+    font-size: 22px;
     z-index: 4;
-    right: 10px;
+    right: 20px;
     top: 10px;
     i + i {
-      margin-left: 10px;
+      margin-left: 14px;
     }
   }
 }

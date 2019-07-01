@@ -1,6 +1,6 @@
 const app = {
   state: {
-    navIndex: 0,
+    navIndex: 'home',
     searchVal: '',
     gotSearch: 0
   },
@@ -9,7 +9,6 @@ const app = {
       state.navIndex = navIndex
     },
     CHANGE_SEARCHVAL: (state, searchVal) => {
-      console.log(searchVal)
       state.searchVal = searchVal
     },
     GOTSEARCH: (state) => {

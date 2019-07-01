@@ -1,5 +1,5 @@
 <template>
-  <div class="my" ref="myDom" @scroll="handleScroll()">
+  <div class="my" :style="{height:windowHeight+'px'}" @scroll="getscroll()">
     <div class="infoCon">
       <div class="headerBar"></div>
       <div class="userInfo" :style="{height:styles.userInfoHeight+'px'}">
@@ -65,23 +65,33 @@ export default {
         userInfoHeight: 140,
         namePosition: 'absolute',
         nameTop: 40,
-        opacity: 1
+        opacity: 1,
+        windowHeight: 0
       }
     }
   },
+  created () {
+    console.log(document.body.clientHeight)
+    this.windowHeight = document.body.clientHeight
+  },
   mounted () {
-    // console.log(this.$refs.myDom)
-    // this.$refs.my.addEventListener('scroll', this.handleScroll, true)
+    // console.log(this)
+    // window.addEventListener('scroll', this.handleScroll, true)
     // console.log(document.getElementById('id'))
   },
   methods: {
+    getscroll ($event) {
+      console.log($event)
+    },
     handleScroll (e) {
-      console.log(e)
+      // console.log(e)
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+
       // var scrollTop =
       //   window.pageYOffset ||
       //   document.documentElement.scrollTop ||
       //   document.body.scrollTop
-      // console.log(scrollTop)
+      console.log(scrollTop)
       // console.log(1)
       // console.log(this.$refs.my.scrollTop)
 
@@ -116,7 +126,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/css/index.scss";
 .my{
-  overflow: hidden;
+  overflow: scroll
 }
 .infoCon {
   position: relative;

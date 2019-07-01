@@ -1,6 +1,6 @@
 <template>
   <div class="tabbar">
-    <router-view></router-view>
+    <router-view/>
     <div style="height:50px"></div>
     <van-tabbar v-model="navIndex">
       <van-tabbar-item name='home' to='/home' icon="home-o">首页</van-tabbar-item>

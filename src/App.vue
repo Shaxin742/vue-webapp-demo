@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import { plusReady } from '@/util/common'
+// import { plusReady } from '@/util/common'
 export default {
   name: 'App',
   created () {
-    plusReady(this.plusReady)
+    // plusReady(this.plusReady)
     this.clientHeight = document.body.clientHeight
   },
   data: function () {

@@ -1,4 +1,3 @@
-
 import { Toast } from 'vant'
 export const plusReady = (fn) => {
   if (window.plus) {
@@ -11,17 +10,17 @@ export const plusReady = (fn) => {
 /* 重写返回按钮事件 */
 plusReady(() => {
   var type = plus.os.name//eslint-disable-line
-  console.log(type)
   if (type === 'iOS') {
     plus.navigator.setStatusBarBackground('#1cbbb4')//eslint-disable-line
   } else {
     plus.navigator.setStatusBarBackground('#0081ff')//eslint-disable-line
   }
-  const pages = ['/']
+  const pages = ['/home', '/plus', '/mine', '/comp']
   var num = 0
   plus.key.addEventListener( //eslint-disable-line
     'backbutton',
     function () {
+      console.log(window.location.href.split('#')[1])
       if (pages.indexOf(window.location.href.split('#')[1]) > -1) {
         num += 1
         Toast({ message: '再次点击退出', position: 'bottom' })

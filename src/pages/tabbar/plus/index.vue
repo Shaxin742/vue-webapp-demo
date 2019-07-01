@@ -8,6 +8,11 @@
 </template>
 <script>
 export default {
-  name:'plus'
+  name:'plus',
+  mounted(){
+    // this.$nextTick(()=>{
+    //   console.log(this)
+    // })
+  }
 }
 </script>

@@ -86,7 +86,6 @@ export default {
     handleScroll (e) {
       // console.log(e)
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-
       // var scrollTop =
       //   window.pageYOffset ||
       //   document.documentElement.scrollTop ||
